@@ -30,12 +30,11 @@ module AvalonNet
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
-
-    # Don't generate system test files.
-    config.generators.system_tests = nil
     config.generators do |g|
+      g.system_tests = nil
       g.assets false
       g.helper false
+      g.template_engine :slim
     end
   end
 end
