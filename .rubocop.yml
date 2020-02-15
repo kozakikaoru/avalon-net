@@ -31,5 +31,5 @@ Style/Documentation:
   Enabled: false
 
 # Line is too long.
-Metrics/LineLength:
+Layout/LineLength:
   Max: 128
