@@ -18,7 +18,7 @@ gem 'slim-rails'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'rspec-rails'
+  gem 'rspec-rails', '>= 4.0.0.beta4'
 end
 
 group :development do
