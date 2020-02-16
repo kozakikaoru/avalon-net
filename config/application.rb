@@ -23,6 +23,8 @@ Bundler.require(*Rails.groups)
 
 module AvalonNet
   class Application < Rails::Application
+    config.title = 'AVALON Network'
+
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 
