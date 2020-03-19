@@ -1,12 +1,8 @@
 nav
   .nav-wrapper
-    a.brand-logo href="#"  AvalonNet
+    = link_to 'AvalonNet', root_path, class: 'brand-logo'
     ul#nav-mobile.right.hide-on-med-and-down
       li
-        a href="1.html"  heder1
-      li
-        a href="2.html"  header2
-      li
-        a href="3.html"  header3
-    a.sidenav-trigger data-target="slide-out" href="#" 
+        = link_to '主催者', organizers_path
+    a.sidenav-trigger data-target="slide-out" href="#"
       i.material-icons menu
