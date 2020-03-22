@@ -19,7 +19,7 @@ class OrganizersController < ApplicationController
     @organizer = Organizer.new organizer_params
 
     if @organizer.save
-      redirect_to @organizer, notice: 'Organizer was successfully created.'
+      redirect_to action: :index
     else
       render :new
     end
@@ -27,7 +27,7 @@ class OrganizersController < ApplicationController
 
   def update
     if @organizer.update organizer_params
-      redirect_to @organizer, notice: 'Organizer was successfully updated.'
+      redirect_to action: :index
     else
       render :edit
     end
@@ -35,7 +35,8 @@ class OrganizersController < ApplicationController
 
   def destroy
     @organizer.destroy
-    redirect_to organizers_url, notice: 'Organizer was successfully destroyed.'
+
+    redirect_to action: :index
   end
 
   private
