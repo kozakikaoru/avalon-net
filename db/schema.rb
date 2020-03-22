@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2020_03_19_222006) do
     t.string "name", null: false, comment: "名称"
     t.integer "game_type", limit: 1, null: false, comment: "ゲームタイプ"
     t.integer "prize", null: false, comment: "賞金"
-    t.datetime "evented_at", null: false, comment: "開催日時"
+    t.datetime "event_at", null: false, comment: "開催日時"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
