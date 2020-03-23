@@ -1,0 +1,15 @@
+ja:
+  activerecord:
+    models:
+      tournament: 大会
+    attributes:
+      tournament:
+        name: 名称
+        game_type: ゲームタイプ
+        game_types:
+          single: シングル
+          duo: デュオ
+          squad: スクワッド
+          quintetto: クインテット
+        prize: 賞金
+        event_at: 開催日時
