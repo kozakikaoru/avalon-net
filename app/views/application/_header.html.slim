@@ -2,7 +2,7 @@ nav
   .nav-wrapper
     = link_to 'AvalonNet', root_path, class: 'brand-logo'
     ul#nav-mobile.right.hide-on-med-and-down
-      li
-        = link_to '主催者', organizers_path
+      li = link_to '主催者', organizers_path
+      li = link_to '大会', tournaments_path
     a.sidenav-trigger data-target="slide-out" href="#"
       i.material-icons menu
