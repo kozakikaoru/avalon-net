@@ -1,0 +1,7 @@
+ja:
+  activerecord:
+    models:
+      organizer: 主催者
+    attributes:
+      organizer:
+        name: 名称
