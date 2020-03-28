@@ -3,17 +3,17 @@
  *= require material_icons
  *= require_self
  */
-@import "materialize/components/color-variables";
-$primary-color: color("blue", "lighten-2") !default;
-$secondary-color: color("yellow", "base") !default;
+@import 'materialize/components/color-variables';
+$primary-color: color('blue', 'lighten-2') !default;
+$secondary-color: color('yellow', 'base') !default;
 @import 'materialize';
 
-header, main, footer {
-    padding-left: 300px;
-}
+// header, main, footer {
+//   padding-left: 300px;
+// }
 
 @media only screen and (max-width : 992px) {
-    header, main, footer {
-        padding-left: 0;
-    }
+  header, main, footer {
+    padding-left: 0;
+  }
 }
