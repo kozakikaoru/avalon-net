@@ -18,3 +18,32 @@ require("materialize-css/dist/js/materialize")
 // const imagePath = (name) => images(name, true)
 
 //= require materialize
+
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('select');
+  const options = {};
+  var instances = M.FormSelect.init(elems, options);
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.datepicker');
+  const options = {
+    i18n: {
+      months: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+      monthsShort: ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],
+      weekdays: ['日曜日','月曜日','火曜日','水曜日','木曜日','金曜日','土曜日'],
+      weekdaysShort: ['日曜日','月曜日','火曜日','水曜日','木曜日','金曜日','土曜日'],
+      weekdaysAbbrev: ['日','月','火','水','木','金','土']
+    },
+    format: 'yyyy-mm-dd'
+  };
+  var instances = M.Datepicker.init(elems, options);
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.timepicker');
+  const options = {
+    twelveHour: false
+  };
+  var instances = M.Timepicker.init(elems, options);
+});

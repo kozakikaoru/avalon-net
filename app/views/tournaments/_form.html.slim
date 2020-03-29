@@ -11,15 +11,18 @@
       = f.text_field :name
     .col.s12
       = f.label :game_type
-      / TODO: language-javascript.jsってやつを作らなきゃいけないらしいけど読み込まれない・・・。
-      /       とりあえずdisplay: blockで対応
-      = f.select :game_type, Tournament.game_types.keys, {}, style: 'display: block'
+      / TODO: 共通化
+      = f.select :game_type, Tournament.game_types.map { |k, v| [t("activerecord.attributes.tournament.game_types.#{k}"), v] }
     .col.s12
       = f.label :prize
       = f.number_field :prize, min: 0, max: 99_999_999
     .col.s12
-      / TODO: selectと同じ理由で後回し、datepicker使いたい。
       = f.label :event_at
-      = f.text_field :event_at
+      = f.text_field :event_at, class: 'datepicker'
+    / TODO: 時間も選択できるようにする。
+    /       materializeではdatetimepickerがない
+    / .col.s6
+    /   = f.label :event_at
+    /   = f.text_field :event_at, class: 'timepicker'
     .col.s12
       .actions = f.submit '登録'
