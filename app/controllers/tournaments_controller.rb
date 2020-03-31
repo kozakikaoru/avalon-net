@@ -1,13 +1,11 @@
 # frozen_string_literal: true
 
 class TournamentsController < ApplicationController
-  before_action :set_tournament, only: %i[show edit update destroy]
+  before_action :set_tournament, only: %i[edit update destroy]
 
   def index
     @tournaments =  Tournament.all
   end
-
-  def show; end
 
   def new
     @tournament =  Tournament.new

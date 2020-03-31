@@ -1,13 +1,11 @@
 # frozen_string_literal: true
 
 class OrganizersController < ApplicationController
-  before_action :set_organizer, only: %i[show edit update destroy]
+  before_action :set_organizer, only: %i[edit update destroy]
 
   def index
     @organizers = Organizer.all
   end
-
-  def show; end
 
   def new
     @organizer = Organizer.new

@@ -12,6 +12,5 @@ table.striped
     - @tournaments.each do |tournament|
       tr
         td = tournament.name
-        td = link_to '詳細', tournament
         td = link_to '編集', edit_tournament_path(tournament)
         td = link_to '削除', tournament, data: { confirm: '本当に削除してよろしいですか？' }, method: :delete

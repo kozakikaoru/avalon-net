@@ -3,6 +3,6 @@
 Rails.application.routes.draw do
   root 'home#index'
 
-  resources :organizers
-  resources :tournaments
+  resources :organizers, except: :show
+  resources :tournaments, except: :show
 end
