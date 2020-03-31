@@ -1,12 +1,13 @@
 h1 主催者一覧
 
+= new_registration_button new_organizer_path
+
 table.striped
   thead
     tr
       th
       th
       th
-
   tbody
     - @organizers.each do |organizer|
       tr
@@ -14,7 +15,3 @@ table.striped
         td = link_to '詳細', organizer
         td = link_to '編集', edit_organizer_path(organizer)
         td = link_to '削除', organizer, data: { confirm: '本当に削除してよろしいですか？' }, method: :delete
-
-br
-
-= link_to '新規登録', new_organizer_path

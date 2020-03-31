@@ -1,12 +1,13 @@
 h1 大会一覧
 
+= new_registration_button new_tournament_path
+
 table.striped
   thead
     tr
       th
       th
       th
-
   tbody
     - @tournaments.each do |tournament|
       tr
@@ -14,7 +15,3 @@ table.striped
         td = link_to '詳細', tournament
         td = link_to '編集', edit_tournament_path(tournament)
         td = link_to '削除', tournament, data: { confirm: '本当に削除してよろしいですか？' }, method: :delete
-
-br
-
-= link_to '新規登録', new_tournament_path

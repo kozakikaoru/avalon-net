@@ -8,4 +8,11 @@ module ApplicationHelper
       AvalonNet::Application.config.title
     end
   end
+
+  def new_registration_button(path)
+    link_to path, class: 'waves-effect waves-light btn right' do
+      concat tag.i 'add', class: 'material-icons left'
+      concat '新規登録'
+    end
+  end
 end
