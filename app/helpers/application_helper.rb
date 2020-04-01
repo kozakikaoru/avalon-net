@@ -17,6 +17,15 @@ module ApplicationHelper
     button_with_icon path, 'edit', '編集', 'light-green'
   end
 
+  def delete_button(path)
+    link_to path, class: "waves-effect waves-light btn right red lighten-1",
+                  data: { confirm: '本当に削除してよろしいですか？' },
+                  method: :delete do
+      concat tag.i 'delete', class: 'material-icons left'
+      concat '削除'
+    end
+  end
+
   private
 
   # アイコン一覧

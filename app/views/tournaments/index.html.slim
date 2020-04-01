@@ -13,4 +13,4 @@ table.striped
       tr
         td = tournament.name
         td = edit_button edit_tournament_path(tournament)
-        td = link_to '削除', tournament, data: { confirm: '本当に削除してよろしいですか？' }, method: :delete
+        td = delete_button tournament

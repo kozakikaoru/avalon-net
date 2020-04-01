@@ -13,4 +13,4 @@ table.striped
       tr
         td = organizer.name
         td = edit_button edit_organizer_path(organizer)
-        td = link_to '削除', organizer, data: { confirm: '本当に削除してよろしいですか？' }, method: :delete
+        td = delete_button organizer
