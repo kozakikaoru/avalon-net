@@ -10,9 +10,17 @@ module ApplicationHelper
   end
 
   def new_registration_button(path)
-    link_to path, class: 'waves-effect waves-light btn right' do
-      concat tag.i 'add', class: 'material-icons left'
-      concat '新規登録'
+    button_with_icon path, 'add', '新規登録', 'blue darken-1'
+  end
+
+  private
+
+  # アイコン一覧
+  # https://materializecss.com/icons.html
+  def button_with_icon(path, icon_name, text, color)
+    link_to path, class: "waves-effect waves-light btn right #{color}" do
+      concat tag.i icon_name, class: 'material-icons left'
+      concat text
     end
   end
 end
