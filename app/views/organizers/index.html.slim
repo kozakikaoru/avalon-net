@@ -12,5 +12,5 @@ table.striped
     - @organizers.each do |organizer|
       tr
         td = organizer.name
-        td = link_to '編集', edit_organizer_path(organizer)
+        td = edit_button edit_organizer_path(organizer)
         td = link_to '削除', organizer, data: { confirm: '本当に削除してよろしいですか？' }, method: :delete

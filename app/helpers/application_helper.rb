@@ -13,6 +13,10 @@ module ApplicationHelper
     button_with_icon path, 'add', '新規登録', 'blue darken-1'
   end
 
+  def edit_button(path)
+    button_with_icon path, 'edit', '編集', 'light-green'
+  end
+
   private
 
   # アイコン一覧
