@@ -10,7 +10,7 @@ module ApplicationHelper
   end
 
   def new_registration_button(path)
-    button_with_icon path, 'add', '新規登録', 'blue darken-1'
+    button_with_icon path, 'add', '新規登録', 'right blue darken-1'
   end
 
   def edit_button(path)
@@ -18,7 +18,7 @@ module ApplicationHelper
   end
 
   def delete_button(path)
-    link_to path, class: "waves-effect waves-light btn right red lighten-1",
+    link_to path, class: "waves-effect waves-light btn red lighten-1",
                   data: { confirm: '本当に削除してよろしいですか？' },
                   method: :delete do
       concat tag.i 'delete', class: 'material-icons left'
@@ -26,12 +26,16 @@ module ApplicationHelper
     end
   end
 
+  def back_button(path)
+    button_with_icon path, 'reply', '戻る', 'left lime darken-2'
+  end
+
   private
 
   # アイコン一覧
   # https://materializecss.com/icons.html
-  def button_with_icon(path, icon_name, text, color)
-    link_to path, class: "waves-effect waves-light btn right #{color}" do
+  def button_with_icon(path, icon_name, text, classes)
+    link_to path, class: "waves-effect waves-light btn #{classes}" do
       concat tag.i icon_name, class: 'material-icons left'
       concat text
     end

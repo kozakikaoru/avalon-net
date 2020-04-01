@@ -12,5 +12,5 @@ table.striped
     - @tournaments.each do |tournament|
       tr
         td = tournament.name
-        td = edit_button edit_tournament_path(tournament)
-        td = delete_button tournament
+        td.center = edit_button edit_tournament_path(tournament)
+        td.center = delete_button tournament

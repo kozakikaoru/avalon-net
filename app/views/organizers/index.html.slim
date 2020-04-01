@@ -12,5 +12,5 @@ table.striped
     - @organizers.each do |organizer|
       tr
         td = organizer.name
-        td = edit_button edit_organizer_path(organizer)
-        td = delete_button organizer
+        td.center = edit_button edit_organizer_path(organizer)
+        td.center = delete_button organizer
