@@ -27,7 +27,13 @@ module ApplicationHelper
   end
 
   def back_button(path)
-    button_with_icon path, 'reply', '戻る', 'left lime darken-2'
+    button_with_icon path, 'reply', '戻る', 'left amber lighten-2'
+  end
+
+  # TODO: f.submitにmaterial適用できなくて妥協・・・
+  #       どうにかしたい。
+  def submit_classes
+    'waves-effect waves-light btn right light-green darken-2'
   end
 
   private

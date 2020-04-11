@@ -17,3 +17,8 @@ $secondary-color: color('green', 'base') !default;
     padding-left: 0;
   }
 }
+
+// TODO: なんか黒になっちゃうから一旦
+input[type="submit"] {
+  color: white !important;
+}
