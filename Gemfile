@@ -25,6 +25,8 @@ end
 
 group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'pry-byebug'
+  gem 'pry-rails'
   gem 'rubocop'
   gem 'rubocop-rails'
   gem 'spring'
