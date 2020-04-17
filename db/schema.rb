@@ -10,12 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_19_222006) do
+ActiveRecord::Schema.define(version: 2020_04_15_173017) do
 
   create_table "organizers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", null: false, comment: "名称"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "results", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.bigint "tournament_id", null: false
+    t.integer "rank", null: false, comment: "順位"
+    t.string "player_ign", comment: "名称"
+    t.integer "kill", default: 0, null: false, comment: "キル数"
+    t.integer "damage", default: 0, null: false, comment: "ダメージ"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["tournament_id"], name: "index_results_on_tournament_id"
   end
 
   create_table "tournaments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -27,4 +38,5 @@ ActiveRecord::Schema.define(version: 2020_03_19_222006) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "results", "tournaments"
 end
