@@ -19,13 +19,13 @@ require("materialize-css/dist/js/materialize")
 
 //= require materialize
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('turbolinks:load', function() {
   var elems = document.querySelectorAll('select');
   const options = {};
   var instances = M.FormSelect.init(elems, options);
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('turbolinks:load', function() {
   var elems = document.querySelectorAll('.datepicker');
   const options = {
     i18n: {
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var instances = M.Datepicker.init(elems, options);
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('turbolinks:load', function() {
   var elems = document.querySelectorAll('.timepicker');
   const options = {
     twelveHour: false
