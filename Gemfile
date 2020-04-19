@@ -15,8 +15,8 @@ gem 'webpacker', '~> 4.0'
 
 gem 'slim-rails'
 
-gem 'materialize-sass', '~> 1.0.0'
 gem 'material_icons'
+gem 'materialize-sass', '~> 1.0.0'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
