@@ -5,7 +5,10 @@
       ul
         - @organizer.errors.full_messages.each do |message|
           li = message
-  = f.label :name
-  = f.text_field :name
+
+  .row
+    .col.s12
+      = f.label :name
+      = f.text_field :name
 
   = f.submit '登録', class: submit_classes
