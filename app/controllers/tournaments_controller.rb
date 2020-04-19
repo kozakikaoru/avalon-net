@@ -4,17 +4,17 @@ class TournamentsController < ApplicationController
   before_action :set_tournament, only: %i[edit update destroy]
 
   def index
-    @tournaments =  Tournament.all
+    @tournaments = Tournament.all
   end
 
   def new
-    @tournament =  Tournament.new
+    @tournament = Tournament.new
   end
 
   def edit; end
 
   def create
-    @tournament =  Tournament.new tournament_params
+    @tournament = Tournament.new tournament_params
 
     if @tournament.save
       redirect_to action: :index
@@ -40,7 +40,7 @@ class TournamentsController < ApplicationController
   private
 
   def set_tournament
-    @tournament =  Tournament.find params[:id]
+    @tournament = Tournament.find params[:id]
   end
 
   def tournament_params
