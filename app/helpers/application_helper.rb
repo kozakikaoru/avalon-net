@@ -40,6 +40,10 @@ module ApplicationHelper
     button_with_icon path, 'speaker_notes', 'リザルト', 'deep-purple lighten-2'
   end
 
+  def results_import_button
+    button_with_icon '#', 'input', '画像読み込み', 'right brown lighten-2 disabled'
+  end
+
   private
 
   # アイコン一覧
