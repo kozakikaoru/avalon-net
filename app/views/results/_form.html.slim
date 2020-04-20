@@ -1,0 +1,33 @@
+= form_with model: @tournament, url: tournament_results_path, method: method, local: true do |f|
+  - if @tournament.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@tournament.errors.count, "error")} prohibited this tournament from being saved:"
+      ul
+        - @tournament.errors.full_messages.each do |message|
+          li = message
+  .row
+    table.striped
+      thead
+        tr
+          th
+          th
+          th
+          th
+      tbody
+        = f.fields_for :results do |r|
+          tr
+            = r.hidden_field :id
+            td.center
+              = r.hidden_field :rank
+              = "#{r.object.rank}位"
+            td
+              = r.label :player_ign
+              = r.text_field :player_ign
+            td
+              = r.label :kill
+              = r.number_field :kill, min: 0, max: 99
+            td
+              = r.label :damage
+              = r.number_field :damage, min: 0, max: 99_999
+
+  = f.submit '登録', class: submit_classes

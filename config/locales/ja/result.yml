@@ -1,0 +1,13 @@
+ja:
+  activerecord:
+    models:
+      result: リザルト
+    attributes:
+      result:
+        player_ign: プレイヤー名
+        kill: キル
+        damage: ダメージ
+      tournament/results:
+        player_ign: プレイヤー名
+        kill: キル
+        damage: ダメージ

@@ -8,9 +8,15 @@ table.striped
       th
       th
       th
+      th
   tbody
     - @tournaments.each do |tournament|
       tr
         td = tournament.name
+        td.center
+          - if tournament.results.blank?
+            = result_registration_button new_tournament_results_path(tournament)
+          - else
+            = result_registration_button edit_tournament_results_path(tournament)
         td.center = edit_button edit_tournament_path(tournament)
         td.center = delete_button tournament

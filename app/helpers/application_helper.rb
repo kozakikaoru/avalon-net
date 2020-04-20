@@ -18,7 +18,7 @@ module ApplicationHelper
   end
 
   def delete_button(path)
-    link_to path, class: "waves-effect waves-light btn red lighten-1",
+    link_to path, class: 'waves-effect waves-light btn red lighten-1',
                   data: { confirm: '本当に削除してよろしいですか？' },
                   method: :delete do
       concat tag.i 'delete', class: 'material-icons left'
@@ -34,6 +34,10 @@ module ApplicationHelper
   #       どうにかしたい。
   def submit_classes
     'waves-effect waves-light btn right light-green darken-2'
+  end
+
+  def result_registration_button(path)
+    button_with_icon path, 'speaker_notes', 'リザルト', 'deep-purple lighten-2'
   end
 
   private
