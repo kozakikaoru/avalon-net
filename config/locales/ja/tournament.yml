@@ -12,4 +12,5 @@ ja:
           squad: スクワッド
           quintetto: クインテット
         prize: 賞金
-        event_at: 開催日時
+        events_on: 開催日
+        events_time: 開催時間

@@ -4,10 +4,11 @@ class Tournament < ApplicationRecord
   has_many :results, dependent: :delete_all
   accepts_nested_attributes_for :results
 
-  validates :name,       presence: true
-  validates :game_type,  presence: true
-  validates :prize,      presence: true, numericality: { only_integer: true }
-  validates :event_at, presence: true
+  validates :name,        presence: true
+  validates :game_type,   presence: true
+  validates :prize,       presence: true, numericality: { only_integer: true }
+  validates :events_on,   presence: true
+  validates :events_time, presence: true
 
   enum game_type: {
     single: 1,

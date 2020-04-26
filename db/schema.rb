@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_15_173017) do
+ActiveRecord::Schema.define(version: 2020_04_25_212048) do
 
   create_table "organizers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", null: false, comment: "名称"
@@ -33,7 +33,8 @@ ActiveRecord::Schema.define(version: 2020_04_15_173017) do
     t.string "name", null: false, comment: "名称"
     t.integer "game_type", limit: 1, null: false, comment: "ゲームタイプ"
     t.integer "prize", null: false, comment: "賞金"
-    t.datetime "event_at", null: false, comment: "開催日時"
+    t.date "events_on", null: false, comment: "開催日"
+    t.time "events_time", null: false, comment: "開催時間"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

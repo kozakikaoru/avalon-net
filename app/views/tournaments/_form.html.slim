@@ -16,13 +16,13 @@
     .col.s12
       = f.label :prize
       = f.number_field :prize, min: 0, max: 99_999_999
-    .col.s12
-      = f.label :event_at
-      = f.text_field :event_at, class: 'datepicker'
-    / TODO: 時間も選択できるようにする。
-    /       materializeではdatetimepickerがない
-    / .col.s6
-    /   = f.label :event_at
-    /   = f.text_field :event_at, class: 'timepicker'
+    .col.s6
+      = f.label :events_on
+      / NOTE: date_fieldだと、materializeのdatepickerで選択した値が反映されない・・・。
+      /       苦渋の決断でtext_fieldを使用。
+      = f.text_field :events_on, class: 'datepicker'
+    .col.s6
+      = f.label :events_time
+      = f.time_field :events_time, class: 'timepicker'
 
   = f.submit '登録', class: submit_classes
