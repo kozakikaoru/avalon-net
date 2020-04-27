@@ -14,6 +14,7 @@
       / TODO: 共通化
       = f.select :game_type, Tournament.game_types.map { |k, v| [t("activerecord.attributes.tournament.game_types.#{k}"), k] }
     .col.s12
+      / TODO: 賞金総額にするか一人当たりにするか。
       = f.label :prize
       = f.number_field :prize, min: 0, max: 99_999_999
     .col.s6
