@@ -1,0 +1,4 @@
+- if object.errors.any?
+  .card-panel.red.lighten-5
+    - object.errors.full_messages.each do |message|
+      .red-text = message

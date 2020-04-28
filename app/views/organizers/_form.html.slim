@@ -1,10 +1,6 @@
+/ TODO: form_withにする
 = form_for @organizer do |f|
-  - if @organizer.errors.any?
-    #error_explanation
-      h2 = "#{pluralize(@organizer.errors.count, "error")} prohibited this organizer from being saved:"
-      ul
-        - @organizer.errors.full_messages.each do |message|
-          li = message
+  ==  render 'application/validation_error', object: @organizer
 
   .row
     .col.s12
