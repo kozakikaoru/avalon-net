@@ -3,24 +3,24 @@
   ==  render 'application/validation_error', object: @tournament
 
   .row
-    .col.s12
-      = f.label :name
+    .col.s12.input-field
       = f.text_field :name
-    .col.s12
-      = f.label :game_type
+      = f.label :name
+    .col.s12.input-field
       / TODO: 共通化
       = f.select :game_type, Tournament.game_types.map { |k, v| [t("activerecord.attributes.tournament.game_types.#{k}"), k] }
-    .col.s12
+      = f.label :game_type
+    .col.s12.input-field
       / TODO: 賞金総額にするか一人当たりにするか。
-      = f.label :prize
       = f.number_field :prize, min: 0, max: 99_999_999
-    .col.s6
-      = f.label :events_on
+      = f.label :prize
+    .col.s6.input-field
       / NOTE: date_fieldだと、materializeのdatepickerで選択した値が反映されない・・・。
       /       苦渋の決断でtext_fieldを使用。
-      = f.text_field :events_on, class: 'datepicker'
-    .col.s6
-      = f.label :events_time
+      = f.date_field :events_on, class: 'datepicker'
+      = f.label :events_on
+    .col.s6.input-field
       = f.time_field :events_time, class: 'timepicker'
+      = f.label :events_time
 
   = f.submit '登録', class: submit_classes

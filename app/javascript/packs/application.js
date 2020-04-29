@@ -20,9 +20,13 @@ require("materialize-css/dist/js/materialize")
 //= require materialize
 
 document.addEventListener('turbolinks:load', function() {
+  M.updateTextFields();
+});
+
+document.addEventListener('turbolinks:load', function() {
   var elems = document.querySelectorAll('select');
   const options = {};
-  var instances = M.FormSelect.init(elems, options);
+  M.FormSelect.init(elems, options);
 });
 
 document.addEventListener('turbolinks:load', function() {
@@ -37,7 +41,7 @@ document.addEventListener('turbolinks:load', function() {
     },
     format: 'yyyy-mm-dd'
   };
-  var instances = M.Datepicker.init(elems, options);
+  M.Datepicker.init(elems, options);
 });
 
 document.addEventListener('turbolinks:load', function() {
@@ -45,5 +49,5 @@ document.addEventListener('turbolinks:load', function() {
   const options = {
     twelveHour: false
   };
-  var instances = M.Timepicker.init(elems, options);
+  M.Timepicker.init(elems, options);
 });

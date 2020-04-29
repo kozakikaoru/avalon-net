@@ -3,8 +3,8 @@
   ==  render 'application/validation_error', object: @organizer
 
   .row
-    .col.s12
-      = f.label :name
+    .col.s12.input-field
       = f.text_field :name
+      = f.label :name
 
   = f.submit '登録', class: submit_classes

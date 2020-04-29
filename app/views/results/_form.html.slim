@@ -18,13 +18,16 @@
               = r.hidden_field :rank
               = "#{r.object.rank}位"
             td
-              = r.label :player_ign
-              = r.text_field :player_ign
+              .input-field
+                = r.text_field :player_ign
+                = r.label :player_ign
             td
-              = r.label :kill
-              = r.number_field :kill, min: 0, max: 99
+              .input-field
+                = r.number_field :kill, min: 0, max: 99
+                = r.label :kill
             td
-              = r.label :damage
-              = r.number_field :damage, min: 0, max: 99_999
+              .input-field
+                = r.number_field :damage, min: 0, max: 99_999
+                = r.label :damage
 
   = f.submit '登録', class: submit_classes
