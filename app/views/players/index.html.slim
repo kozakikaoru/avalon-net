@@ -1,0 +1,18 @@
+h1 プレイヤー一覧
+
+= new_registration_button new_player_path
+
+table.striped
+  thead
+    tr
+      th
+      th
+      th
+      th
+  tbody
+    - @players.each do |player|
+      tr
+        td = player.igid
+        td = player.ign
+        td.center = edit_button edit_player_path(player)
+        td.center = delete_button player

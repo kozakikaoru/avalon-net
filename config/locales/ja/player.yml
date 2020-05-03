@@ -1,0 +1,8 @@
+ja:
+  activerecord:
+    models:
+      player: プレイヤー
+    attributes:
+      player:
+        ign: 荒野名
+        igid: 荒野ID

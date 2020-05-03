@@ -1,0 +1,12 @@
+= form_with model: @player, local: true do |f|
+  ==  render 'application/validation_error', object: @player
+
+  .row
+    .col.s12.input-field
+      = f.text_field :ign
+      = f.label :ign
+    .col.s12.input-field
+      = f.text_field :igid
+      = f.label :igid
+
+  = f.submit '登録', class: submit_classes
