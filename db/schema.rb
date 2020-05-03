@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_02_021606) do
+ActiveRecord::Schema.define(version: 2020_05_03_005750) do
 
   create_table "organizers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", null: false, comment: "名称"
@@ -30,11 +30,13 @@ ActiveRecord::Schema.define(version: 2020_05_02_021606) do
   create_table "results", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.bigint "tournament_id", null: false
     t.integer "rank", null: false, comment: "順位"
+    t.bigint "player_id"
     t.string "player_ign", comment: "名称"
     t.integer "kill", default: 0, null: false, comment: "キル数"
     t.integer "damage", default: 0, null: false, comment: "ダメージ"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["player_id"], name: "index_results_on_player_id"
     t.index ["tournament_id"], name: "index_results_on_tournament_id"
   end
 
@@ -48,5 +50,6 @@ ActiveRecord::Schema.define(version: 2020_05_02_021606) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "results", "players"
   add_foreign_key "results", "tournaments"
 end
